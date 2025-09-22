@@ -1,0 +1,1662 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+<style><style>
+/* Animasi tirai */
+.carousel-item {
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: all 1s ease-in-out;
+  clip-path: inset(0 50% 0 50%); /* awalnya tertutup di tengah */
+}
+
+.carousel-item.active {
+  opacity: 1;
+  transform: scaleX(1);
+  clip-path: inset(0 0 0 0); /* terbuka penuh */
+}
+</style>
+</style>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <title>Andhra Ary-SMK Texmaco Semarang</title>
+    
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link rel="stylesheet" href="assets/css/templatemo-grad-school.css">
+    <link rel="stylesheet" href="assets/css/owl.css">
+    <link rel="stylesheet" href="assets/css/lightbox.css">
+<!--
+--> <!-- Rata Kanan Kiri -->
+<style>
+  p {
+    text-align: justify;
+  }
+  
+p.no-justify {
+  text-align: left; /* bisa juga center atau right */
+}
+</style>
+
+<style>/* Efek dasar carousel */
+.carousel-item {
+  transition: transform 1s ease, opacity 1s ease;
+  opacity: 0;
+  transform: scale(0.95) translateX(50px);
+}
+
+/* Saat aktif, tampil dengan animasi */
+.carousel-item.active {
+  opacity: 1;
+  transform: scale(1) translateX(0);
+}
+
+/* Biar smooth saat keluar */
+.carousel-item-next,
+.carousel-item-prev {
+  transform: scale(0.95) translateX(-50px);
+  opacity: 0;
+}
+
+
+/* Matikan transisi default bootstrap */
+.carousel-item {
+  transition: none !important;
+  opacity: 0;
+  transform: scale(0.9) translateX(100px);
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+/* Saat aktif, pakai animasi masuk */
+.carousel-item.active {
+  animation: slideIn 0.8s ease forwards;
+  position: relative;
+  z-index: 2;
+}
+
+/* Saat keluar, pakai animasi keluar */
+.carousel-item.carousel-item-start,
+.carousel-item.carousel-item-end {
+  animation: slideOut 0.8s ease forwards;
+  z-index: 1;
+}
+
+/* Keyframes animasi */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(100px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-100px) scale(0.9);
+  }
+}
+</style>
+
+  </head>
+
+<style>/* Biar baris gambar + teks sejajar */
+.section.why-us .tabs-content .row {
+  display: flex;
+  align-items: center; /* sejajarkan vertikal tengah */
+}
+
+/* Kolom kiri (gambar) dan kanan (teks) biar punya jarak enak */
+.section.why-us .tabs-content .col-md-6 {
+  padding: 15px;
+}
+
+/* Atur gambar biar ukuran konsisten */
+.section.why-us .tabs-content img {
+  width: 100%;
+  max-width: 350px;   /* bisa kamu sesuaikan */
+  height: 300px;      /* samakan tinggi */
+  object-fit: cover;  /* biar proporsional */
+  border-radius: 12px; /* biar sudut halus */
+  display: block;
+  margin: 0 auto;
+}
+</style>
+  
+  <style>
+  header a {
+    text-decoration: none !important;
+    border-bottom: none !important;
+  }
+</style>
+
+
+<!-- Bootstrap CSS buat pop up galeri -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ <style>
+    .social-icons {
+      margin: 20px 0;
+      text-align: center;  
+    }
+
+    .social-icons a {
+      color: white;
+      font-size: 40px;
+      margin: 0 20px;  
+      transition: 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #ffcc00; 
+    }
+  </style>
+
+<body>
+   <audio id="bg-music" autoplay loop>
+  <source src="assets/audio/Memory Reboot.mp3"type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+  <!--header-->
+  <header class="main-header clearfix" role="header">
+    <div class="logo">
+      <a href="#"><em>KaK._</em>.Ary</a>
+    </div>
+    <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
+    <nav id="menu" class="main-nav" role="navigation">
+      <ul class="main-menu">
+        <li><a href="#section1">Halaman Utama</a></li>
+        <li class="has-submenu"><a href="#section2">Selengkapnya</a>
+          <ul class="sub-menu">
+            <li><a href="#section2">Biodata</a></li>
+            <li><a href="#section4">Sekolah</a></li>
+            <li><a href="#section6">Lain-lain</a></li>
+           
+          </ul>
+        </li>
+      <li><a href="#" data-bs-toggle="modal" data-bs-target="#karyaModal">Karya</a></li>
+
+        <!-- <li><a href="#section5">Video</a></li> -->
+        <li><a href="#" data-bs-toggle="modal" data-bs-target="#galeriModal">Galeri</a></li>
+        <li><a href="ftp://hp:11111@192.168.1.10" class="external">External</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ***** Main Banner Area Start ***** -->
+  <section class="section main-banner" id="top" data-section="section1">
+      <video autoplay muted loop id="bg-video">
+          <source src="assets/images/DJI_0533.MP4" type="video/mp4" />
+      </video>
+
+      <div class="video-overlay header-text">
+          <div class="caption">
+              <h6>SMK Texmaco Semarang</h6>
+              <h2><em>Andhra</em> Ary</h2>
+              <div class="main-button">
+                  
+              </div>
+          </div>
+      </div>
+  </section>
+  <!-- ***** Main Banner Area End ***** -->
+
+
+  <section class="features">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-12">
+          <div class="features-post">
+            <div class="features-content">
+              <div class="content-show">
+                <h4><i class="fa fa-pencil"></i>Sambutan Developer</h4>
+              </div>
+              <div class="content-hide">
+                <p>Halo, selamat datang di website pribadi saya. Saya seorang web developer yang senang menciptakan tampilan sederhana, fungsional, dan mudah digunakan. Melalui website ini, saya ingin berbagi karya, pengalaman, serta perjalanan saya di dunia pengembangan web. Terima kasih sudah berkunjung!</p>
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-12">
+          <div class="features-post second-features">
+            <div class="features-content">
+              <div class="content-show">
+                <h4><i class="fa fa-graduation-cap"></i>Tujuan Pembuatan Web</h4>
+              </div>
+              <div class="content-hide">
+                <p>Website ini saya buat sebagai bagian dari pengembangan keterampilan saya di bidang web development sekaligus untuk memenuhi tugas PKL (Praktik Kerja Lapangan). Melalui proyek ini, saya belajar menggabungkan teori dan praktik, mulai dari desain tampilan, pengaturan konten, hingga pengelolaan domain dan server. Selain untuk tugas, website ini juga menjadi media untuk menampilkan karya dan pengalaman saya.</p>
+ 
+            </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-12">
+          <div class="features-post third-features">
+            <div class="features-content">
+              <div class="content-show">
+                <h4><i class="fa fa-book"></i>Pengertian Website</h4>
+              </div>
+              <div class="content-hide">
+                <p>Web (World Wide Web) adalah kumpulan halaman yang saling terhubung dan dapat diakses melalui internet menggunakan browser. Web digunakan untuk berbagi informasi, berkomunikasi, hingga menjalankan berbagai layanan secara online.</p>
+                
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section why-us" data-section="section2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-heading">
+            <h2>Biodata</h2>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div id="tabs">
+  <ul class="custom-tabs">
+    <li><a href="#tabs-1" class="tab-link active">Data Diri</a></li>
+    <li><a href="#tabs-2" class="tab-link">Jurusan</a></li>
+    <li><a href="#tabs-3" class="tab-link">Riwayat Pendidikan</a></li>
+  </ul>
+            <section class='tabs-content'>
+              <article id='tabs-1'>
+                <div class="row">
+                  <div class="col-md-6">
+                    <img src="assets/images/foto gua keren.jpg" alt="">
+                  </div>
+                  <div class="col-md-6">
+                    <h4>Biodata</h4>
+                    <p>Nama       : Andhra Ary Susanto</p>
+                    <p>Kelahiran  : Blora, 17 September 2007</p>
+                    <p>Alamat     : Jl. BBT V. Blok E 218 RT 01 RW 10, Gondoriyo, Ngaliyan</p>
+                    <p>Agama      : Islam</p>
+                    <p>Sekolah    : SMK Texmaco Semarang</p>
+                    <p>Jurusan    : Teknik Komputer Jaringan</p>
+                    </div>
+                </div>
+             </article>
+<article id='tabs-2'>
+  <div class="row equal-height">
+    <!-- Kolom kiri -->
+    <div class="col-md-6 image-box">
+      <img src="assets/images/laptop.jpg" alt="" class="img-fluid rounded">
+    </div>
+
+    <!-- Kolom kanan -->
+    <div class="col-md-6 text-box">
+      <div class="content">
+        <h4>Teknik Komputer Jaringan</h4>
+        <p> Halo Semuanya!</p>
+        <p>Namaku Andhra Ary Susanto, Aku adalah seorang Siswa SMK Texmaco Semarang dari Jurusan Teknik Komputer Jaringan (TKJ). Aku Mendaftar di SMK Texmaco Semarang pada tahun 2023 dan memilih jurusan TKJ. Alasan saya memilih jurusan TKJ dikarenakan aku ingin mempelajari lebih dalam tentang dunia IT dan Komputer. Dalam jurusan TKj siswa diajarkan untuk dapat memahami, mengoperasikan, Mengkonfigurasi, Merakit, Merawat perangkat Keras Pada Komputer serta Membangun dan Mengelola Jaringan Komputer</p>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+             <article id='tabs-3'>
+<article id='tabs-3'>
+  <div class="row">
+    <!-- Kolom kiri: gambar utama -->
+    <div class="col-md-6">
+      <img src="assets/images/ai dong.jpg" alt="Gambar Utama" class="img-fluid rounded">
+    </div>
+
+    <!-- Kolom kanan: timeline pendidikan -->
+    <div class="col-md-6">
+      <h4>Riwayat Pendidikan</h4>
+      <div class="timeline">
+        <div class="timeline-item">
+          <span class="year">2011-2012</span>
+          <p>Paud RW 10</p>
+        </div>
+        <div class="timeline-item">
+          <span class="year">2012-2014</span>
+          <p><a href="#" data-bs-toggle="modal" data-bs-target="#tkModal">Tunas Bangsa 4</a></p>
+        </div>
+        <div class="timeline-item">
+          <span class="year">2014-2020</span>
+          <p> <a href="#" data-bs-toggle="modal" data-bs-target="#sdModal">SDN Ngaliyan 01 Semarang</a></p>
+        </div>
+        <div class="timeline-item">
+          <span class="year">2020-2023</span>
+          <p><a href="#" data-bs-toggle="modal" data-bs-target="#smpModal">SMP Texmaco Semarang</a></p>
+        </div>
+        <div class="timeline-item">
+          <span class="year">2023-Sekarang</span>
+          <p><a href="#" data-bs-toggle="modal" data-bs-target="#smkModal">SMK Texmaco Semarang</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+</article>
+
+  </section>
+
+  <section class="section coming-soon" data-section="section3">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7 col-xs-12">
+          <div class="continer centerIt">
+            <div>
+              <h4>Perayaan <em>Tahun Baru</em> 2026</h4>
+              <div class="counter">
+
+                <div class="days">
+                  <div class="value"></div>
+                  <span>Days</span>
+                </div>
+
+                <div class="hours">
+                  <div class="value"></div>
+                  <span>Hours</span>
+                </div>
+
+                <div class="minutes">
+                  <div class="value"></div>
+                  <span>Minutes</span>
+                </div>
+
+                <div class="seconds">
+                  <div class="value"></div>
+                  <span>Seconds</span>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="right-content">
+            <div class="top-content">
+           <img src="assets/images/w.jpeg" alt="Foto Keren" class="img-fluid">
+
+                  </fieldset>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="section4"></section>
+<section class="section courses" data-section="section4">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="section-heading">
+          <h2>Biodata Sekolah</h2>
+        </div>
+      </div>
+    </div>
+
+<section class="section-video">
+  <video autoplay muted loop playsinline class="video-full">
+    <source src="assets/Video/ocamxet.mp4" type="video/mp4">
+    Browser Anda tidak mendukung video.
+  </video>
+</section>
+
+  <!-- Kolom kanan (deskripsi) -->
+<div class="row justify-content-center my-5">
+  <div class="col-md-10">
+    <div class="extra-box text-center box-orange">
+      <h4><i class="fa fa-school"></i> SMK TEXMACO SEMARANG</h4>
+      <h5>Jl Raya Mangkang KM 16</h5>
+      <p>
+        SMK Texmaco Semarang adalah salah satu sekolah menengah kejuruan swasta terbesar di Kota Semarang
+        yang berdiri sejak 1997 di bawah naungan Yayasan PPIT Texmaco. Memiliki Sekitar 65 Guru dan Berlokasi di Jl. Raya Mangkang KM 16,
+        sekolah ini telah terakreditasi A dan memiliki tujuh jurusan unggulan, yaitu Rekayasa Perangkat Lunak,
+        Teknik Komputer dan Jaringan, Teknik Kendaraan Ringan, Teknik Permesinan, Teknik Pemintalan Serat Buatan,
+        Teknik Elektronika Industri, serta Tata Busana. Dengan jumlah siswa ribuan setiap tahunnya, fasilitas lengkap,
+        serta dukungan LSP-P1 berlisensi BNSP untuk sertifikasi kompetensi, SMK Texmaco berkomitmen melahirkan lulusan
+        kompeten, siap kerja, dan mampu bersaing di dunia industri maupun global.
+      </p>
+      <p>terdapat 7 Program Kompetensi Keahlian, Dianataranya:</p>
+    </div>
+  </div>
+</div>
+
+    <!-- Baris Carousel -->
+    <div class="row">
+      <div class="col-md-12">
+        <div class="owl-carousel owl-theme">
+          <div class="item">
+            <img src="assets/images/RPL.jpg" alt="Course #1">
+            <div class="down-content">
+              <h4>Rekayasa Perangkat Lunak</h4>
+               <p class="no-justify">Disiplin ilmu yang Mempelajari pengoperasian Software. </p>
+              <div class="author-image">
+                <img src="assets/images/logo smk.jpg" alt="Author 1">
+              </div>
+              <div class="text-button-pay">
+                <a href="#">Info RPL <i class="fa fa-angle-double-right"></i></a>
+              </div>
+            </div>
+          </div>
+ 
+          <div class="item">
+            <img src="assets/images/tkj.jpeg" alt="Course #2">
+            <div class="down-content">
+              <h4>Teknik Komputer Jaringan</h4>
+              <p class="no-justify">Adalah bidang keahlian di bidang Teknologi Informasi dan Komunikasi</p>
+              <div class="author-image">
+                <img src="assets/images/logo smk.jpg" alt="Author 2">
+              </div>
+              <div class="text-button-free">
+                <a href="#">Info TKJ <i class="fa fa-angle-double-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="assets/images/TEI.jpg" alt="Course #3">
+            <div class="down-content">
+              <h4>Teknik Elektronik Industri</h4>
+              <p class="no-justify">Bidang keahlian yang berfokus pada perancangan Elektronik</p>
+             <div class="author-image">
+                <img src="assets/images/logo smk.jpg" alt="Author 3">
+              </div>
+              <div class="text-button-pay">
+                <a href="#">Info TEI <i class="fa fa-angle-double-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="assets/images/tkr.jpg" alt="Course #4">
+            <div class="down-content">
+              <h4>TEknik kendaraan ringan</h4>
+              <p class="no-justify">pembelajaran ilmu dan praktik perbaikan serta perawatan Kendaraan roda 4</p>
+              <div class="author-image">
+                <img src="assets/images/logo smk.jpg" alt="Author 4">
+              </div>
+              <div class="text-button-free">
+                <a href="#">Info TKR <i class="fa fa-angle-double-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="assets/images/tpsb.jpg" alt="">
+            <div class="down-content">
+              <h4>TEKNIK PEMINTALAN SERAT BUATAN</h4>
+              <p class="no-justify">pendidikan yang mengajarkan proses pembuatan serat buatan</p>
+                <div class="author-image">
+                <img src="assets/images/logo smk.jpg" alt="">
+              </div>
+              <div class="text-button-pay">
+                <a href="#">Info TPSB <i class="fa fa-angle-double-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="assets/images/tb.jpeg" alt="">
+            <div class="down-content">
+              <h4>Tata Busana</h4>
+              <p class="no-justify">Disiplin ilmu dan seni dalam merancang, mendesain, dan membuat pakaian serta Komponen Hiasan pakaian</p>
+              <div class="author-image">
+                <img src="assets/images/logo smk.jpg" alt="">
+              </div>
+              <div class="text-button-free">
+                <a href="#">Info TB <i class="fa fa-angle-double-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <img src="assets/images/tp.jpeg" alt="">
+            <div class="down-content">
+              <h4>Teknik Permesinan</h4>
+              <p class="no-justify">bidang kejuruan yang fokus pada produksi komponen mesin serta komponen peralatan Industri.</p>
+              <div class="author-image">
+                <img src="assets/images/logo smk.jpg" alt="">
+              </div>
+              <div class="text-button-free">
+                <a href="#">Info TP <i class="fa fa-angle-double-right"></i></a>
+              </div>
+            </div>
+          </div>
+         
+          
+                </div>
+    </div>
+  </section>
+  
+
+  <!-- SECTION LET'S KEEP IN TOUCH -->
+<section class="section contact" data-section="section6">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="section-heading">
+          <h2>Informasi Lebih Lanjut</h2>
+        </div>
+      </div>
+
+
+<!-- SECTION CERITA SINGKAT -->
+<section class="section video" data-section="section5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 align-self-center">
+        <div class="left-content">
+          <span>Cerita Singkat</span>
+          <h4>Andhra Ary Susanto </h4>
+          <h4><em>Pelajar</em></h4>
+          <p>Aku bernama Andhra, lahir pada 17 September 2007 di Kabupaten Blora dan merupakan anak pertama dari tiga bersaudara. Masa kecilku penuh kebahagiaan, diisi dengan bermain bersama teman-teman di sekitar rumah, bersepeda keliling kampung, serta menghabiskan waktu dengan keluarga yang selalu mendukungku. Perjalananku di bangku sekolah dimulai dari TK Tunas Bangsa 4 (2012–2014), kemudian melanjutkan ke SDN Ngaliyan 01 Semarang (2014–2020), lalu masuk SMP Texmaco Semarang (2020–2023). Saat ini aku bersekolah di SMK Texmaco Semarang jurusan Teknik Komputer dan Jaringan (TKJ) karena tertarik untuk mendalami dunia komputer dan jaringan. Setelah lulus nanti, aku berencana untuk melanjutkan pendidikan ke perguruan tinggi agar bisa semakin mengembangkan ilmu dan meraih cita-cita di bidang teknologi.</p>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <article class="video-item">
+          <div class="video-caption">
+            <h4> <i class="fa fa-camera"></i>  Semarang    |   15 October 2009</h4>
+          </div>
+          <figure>
+            <img src="assets/images/bocah 2.jpg" alt="Power HTML Template" class="img-fluid">
+          </figure>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+      <div class="col-md-6">
+        <form id="contact" action="https://formspree.io/f/xjkezpoz" method="POST">
+          <div class="row">
+            <div class="col-md-6">
+              <fieldset>
+                <input name="name" type="text" class="form-control" id="name" placeholder="Your Name" required>
+              </fieldset>
+            </div>
+            <div class="col-md-6">
+              <fieldset>
+                <input name="email" type="email" class="form-control" id="email" placeholder="Your Email" required>
+              </fieldset>
+            </div>
+            <div class="col-md-12">
+              <fieldset>
+                <textarea name="message" rows="6" class="form-control" id="message" placeholder="Your message..." required></textarea>
+              </fieldset>
+            </div>
+            <div class="col-md-12">
+              <fieldset>
+                <button type="submit" id="form-submit" class="button">Send Message Now</button>
+              </fieldset>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-6">
+        <div id="map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1202.4778055666652!2d110.32617161875561!3d-6.995590488320473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e1!3m2!1sid!2sid!4v1757319556331!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+        <!-- Do you need a working HTML contact-form script?
+                	
+                    Please visit https://templatemo.com/contact page -->
+                    
+
+  </section>
+
+  <footer>
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="social-icons">
+      
+            <a href="https://www.instagram.com/gua._.ary?igsh=MW4xbjN5ZnhmaXE5aw==" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/andhra.susanto.5" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://youtube.com/@aku_ary?si=r0G0p5EuLm9Xf-cO" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.tiktok.com/@andhrary?_t=ZS-8zZZ7FQ8ddv&_r=1" target="_blank"><i class="fab fa-tiktok"></i></a>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+    
+  </footer>
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/owl-carousel.js"></script>
+    <script src="assets/js/lightbox.js"></script>
+    <script src="assets/js/tabs.js"></script>
+    <script src="assets/js/video.js"></script>
+    <script src="assets/js/slick-slider.js"></script>
+    <script src="assets/js/custom.js"></script>
+    <script>
+        //according to loftblog tut
+        $('.nav li:first').addClass('active');
+
+        var showSection = function showSection(section, isAnimate) {
+          var
+          direction = section.replace(/#/, ''),
+          reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+          reqSectionPos = reqSection.offset().top - 0;
+
+          if (isAnimate) {
+            $('body, html').animate({
+              scrollTop: reqSectionPos },
+            800);
+          } else {
+            $('body, html').scrollTop(reqSectionPos);
+          }
+
+        };
+
+        var checkSection = function checkSection() {
+          $('.section').each(function () {
+            var
+            $this = $(this),
+            topEdge = $this.offset().top - 80,
+            bottomEdge = topEdge + $this.height(),
+            wScroll = $(window).scrollTop();
+            if (topEdge < wScroll && bottomEdge > wScroll) {
+              var
+              currentId = $this.data('section'),
+              reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+              reqLink.closest('li').addClass('active').
+              siblings().removeClass('active');
+            }
+          });
+        };
+
+        $('.main-menu, .scroll-to-section').on('click', 'a', function (e) {
+          if($(e.target).hasClass('external')) {
+            return;
+          }
+          e.preventDefault();
+          $('#menu').removeClass('active');
+          showSection($(this).attr('href'), true);
+        });
+
+        $(window).scroll(function () {
+          checkSection();
+        });
+    </script>
+    
+
+
+
+<script>document.querySelector('.btn-smk').addEventListener('click', function(e) {
+      e.preventDefault(); // cegah lompat biasa
+
+      // Ambil target section
+      const target = document.querySelector('#section4');
+      const targetPos = target.offsetTop;
+      const startPos = window.pageYOffset;
+      const distance = targetPos - startPos;
+      const duration = 1500; // durasi scroll (ms), makin besar makin halus
+      let start = null;
+
+      function animationScroll(timestamp) {
+        if (!start) start = timestamp;
+        const progress = timestamp - start;
+        const percent = Math.min(progress / duration, 1);
+
+        // easing (biar halus, nggak kaku)
+        const ease = percent < 0.5
+          ? 2 * percent * percent
+          : -1 + (4 - 2 * percent) * percent;
+
+        window.scrollTo(0, startPos + distance * ease);
+
+        if (progress < duration) {
+          requestAnimationFrame(animationScroll);
+        }
+      }
+
+      requestAnimationFrame(animationScroll);
+    });</script>
+
+    <!-- Modal Popup -->
+<!-- Modal Popup -->
+<div id="courseModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); justify-content:center; align-items:center; z-index:9999;">
+  <div id="modalContentBox" style="background:#111; color:#fff; padding:30px; border-radius:10px; max-width:600px; width:90%; position:relative; text-align:left;">
+    <span id="modalClose" style="position:absolute; top:10px; right:15px; cursor:pointer; font-size:28px; color:#ffcc00;">&times;</span>
+    <h3 id="modalTitle" style="color:#ffcc00;"></h3>
+    <p id="modalContent"></p>
+    <video id="modalVideo" width="100%" controls autoplay style="margin-top:15px; display:none;" muted>
+      <source id="modalVideoSrc" src="" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+
+<script>
+const courses = {
+  "Info RPL": {
+    title: "Rekayasa Perangkat Lunak",
+    content: "Bidang studi yang mengajarkan prinsip dan teknik untuk merancang, mengembangkan, menguji, dan memelihara perangkat lunak (software). Pembelajaran di jurusan ini berfokus pada pemrograman, analisis algoritma, desain sistem, manajemen proyek perangkat lunak, dan basis data, dengan tujuan menciptakan aplikasi desktop, mobile, web, hingga sistem informasi. ",
+    video: "assets/video/Rekayasa.mp4"
+  },
+  "Info TKJ": {
+    title: "Teknik Komputer dan Jaringan",
+    content: "Program keahlian di bidang teknologi informasi yang mendidik siswa untuk menguasai perakitan, konfigurasi, pengelolaan, dan pemeliharaan perangkat keras (hardware) komputer serta sistem jaringan komputer, mulai dari perakitan komputer, instalasi sistem operasi, hingga membangun dan mengamankan jaringan lokal (LAN) hingga jaringan luas (WAN).",
+    video: "assets/video/komputer.mp4"
+  },
+  "Info TEI": {
+    title: "Teknik Elektronika Industri",
+    content: "Bidang teknik yang fokus pada perancangan, perakitan, pengoperasian, dan pemeliharaan sistem kontrol elektronik serta otomatisasi dalam proses industri. Jurusan ini mendidik siswa untuk menciptakan solusi teknologi yang meningkatkan efisiensi dan daya saing industri, serta mempersiapkan mereka untuk karir di bidang otomasi, robotika, dan instrumentas.",
+    video: "assets/video/elektro.mp4"
+  },
+  "Info TP": {
+    title: "Teknik Permesinan",
+    content: "Bidang keahlian yang mempersiapkan siswa untuk menjadi tenaga ahli terampil dalam merancang, membuat, dan merawat mesin serta komponen mekanik menggunakan berbagai mesin perkakas seperti bubut, frais, gerinda, dan CNC. Fokus utama jurusan ini adalah pada proses manufaktur dan produksi barang-barang teknik yang dibutuhkan dalam berbagai sektor industri.",
+    video: "assets/video/mesin.mp4"
+  },
+  "Info TB": {
+    title: "Tata Busana",
+    content: "program studi yang fokus pada desain, pembuatan, dan pengelolaan produk busana. Siswa mempelajari teknik dasar membuat desain, pola, dan menjahit, serta menganalisis tren fashion, marketing, dan manajemen bisnis di industri busana. Selain itu Siswa Juga diajari untuk membuat dan mendesain Hiasan Pada Pakaian yang dirancang.",
+    video: "assets/video/baju.mp4"
+  },
+  "Info TPSB": {
+    title: "Teknik Pemintalan Serat Buatan",
+    content: "Program kejuruan yang mendalami proses pembuatan serat, termasuk proses polimerisasi dan pemintalan melalui spinneret. Jurusan ini membekali siswa dengan pengetahuan dan keterampilan praktis dalam mengoperasikan mesin pemintalan, mengendalikan kualitas produksi, dan memahami prinsip dasar kimia serta fisika serat yang digunakan dalam industri tekstil.",
+    video: "assets/video/tekstil.mp4"
+  },
+  "Info TKR": {
+    title: "Teknik Kendaraan Ringan",
+    content: "Program keahlian di Sekolah Menengah Kejuruan (SMK) yang fokus pada pembelajaran perawatan, perbaikan, dan sistem kerja kendaraan bermotor ringan, seperti mobil. Siswa akan dibekali pengetahuan teori dan keterampilan praktik untuk mendiagnosis dan mengatasi berbagai masalah pada komponen mesin, kelistrikan, sasis, dan sistem pengereman otomotif.",
+    video: "assets/video/mobil.mp4"
+  }
+};
+
+const modal = document.getElementById('courseModal');
+const modalTitle = document.getElementById('modalTitle');
+const modalContent = document.getElementById('modalContent');
+const modalClose = document.getElementById('modalClose');
+const modalVideo = document.getElementById('modalVideo');
+const modalVideoSrc = document.getElementById('modalVideoSrc');
+
+// Event listener tombol
+document.querySelectorAll('.text-button-pay a, .text-button-free a').forEach(btn => {
+  btn.addEventListener('click', function(e) {
+    e.preventDefault();
+    const text = this.textContent.trim().split(' ').slice(0,2).join(' '); // ambil "Info RPL", "Info TKJ", dll
+    if(courses[text]){
+      // Set title & content
+      modalTitle.innerText = courses[text].title;
+      modalContent.innerText = courses[text].content;
+
+      // Set video
+      if(courses[text].video){
+        modalVideoSrc.src = courses[text].video;
+        modalVideo.style.display = 'block';
+        modalVideo.load();
+        modalVideo.play();
+      } else {
+        modalVideo.src = '';
+        modalVideo.style.display = 'none';
+      }
+
+      // Tampilkan modal
+      modal.style.display = 'flex';
+    }
+  });
+});
+
+// Tutup modal
+modalClose.addEventListener('click', () => {
+  modal.style.display = 'none';
+  modalVideo.pause();
+  modalVideo.currentTime = 0;
+});
+
+// Klik di luar modal
+window.addEventListener('click', (e) => {
+  if(e.target === modal){
+    modal.style.display = 'none';
+    modalVideo.pause();
+    modalVideo.currentTime = 0;
+  }
+});
+</script>
+
+
+
+     
+<!-- Modal Galeri -->
+<div class="modal fade" id="galeriModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content bg-dark text-white">
+      
+      <!-- Header tanpa garis bawah -->
+      <div class="modal-header">
+        <h5 class="modal-title">Galeri Foto</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+
+        <!-- Carousel -->
+        <div id="galeriCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+
+            <!-- Foto 1 -->
+            <div class="carousel-item active text-center">
+              <div class="foto-slide" style="background-image: url('assets/images/tekaje.jpg');"></div>
+              <div class="p-3 bg-secondary rounded">
+                <h5>Foto Kelas</h5>
+                
+            </div>
+            </div>
+
+            <!-- Foto 2 -->
+            <div class="carousel-item text-center">
+              <div class="foto-slide" style="background-image: url('assets/images/curug.jpg');"></div>
+              <div class="p-3 bg-secondary rounded">
+                <h5>Foto Curug telu</h5>
+                <p></p>
+              </div>
+            </div>
+
+            <!-- Foto 3 -->
+            <div class="carousel-item text-center">
+              <div class="foto-slide" style="background-image: url('assets/images/yuktalk.jpg');"></div>
+              <div class="p-3 bg-secondary rounded">
+                <h5>Foto Seminar Yuk talk</h5>
+                
+              
+            </div>
+          </div>
+
+           <!-- Foto 2 -->
+            <div class="carousel-item text-center">
+              <div class="foto-slide" style="background-image: url('assets/images/nonton.jpg');"></div>
+              <div class="p-3 bg-secondary rounded">
+                <h5>Foto Nobar Film</h5>
+                
+              </div>
+            </div>
+
+             <!-- Foto 2 -->
+            <div class="carousel-item text-center">
+              <div class="foto-slide" style="background-image: url('assets/images/muncak.jpg');"></div>
+              <div class="p-3 bg-secondary rounded">
+                <h5>Foto Bersama di Puncak Ungaran</h5>
+               
+              </div>
+            </div>
+
+             <!-- Foto 2 -->
+            <div class="carousel-item text-center">
+              <div class="foto-slide" style="background-image: url('assets/images/sunrise.jpg');"></div>
+              <div class="p-3 bg-secondary rounded">
+                <h5>Foto Sunrise</h5>
+               
+              </div>
+            </div>
+
+             <!-- Foto 2 -->
+            <div class="carousel-item text-center">
+              <div class="foto-slide" style="background-image: url('assets/images/bali.jpg');"></div>
+              <div class="p-3 bg-secondary rounded">
+                <h5>Foto Pantai Kuta</h5>
+               
+              </div>
+            </div>
+
+             <!-- Foto 2 -->
+            <div class="carousel-item text-center">
+              <div class="foto-slide" style="background-image: url('assets/images/pj\ dugder\ 2.jpg');"></div>
+              <div class="p-3 bg-secondary rounded">
+                <h5>Foto Bersama PJ Pramuka Dugderan</h5>
+                
+              </div>
+            </div>
+
+             <!-- Foto 2 -->
+            <div class="carousel-item text-center">
+              <div class="foto-slide" style="background-image: url('assets/images/jota\ joti.jpg');"></div>
+              <div class="p-3 bg-secondary rounded">
+                <h5>Foto Jota Joti</h5>
+              
+              </div>
+            </div>
+
+             <!-- Foto 2 -->
+            <div class="carousel-item text-center">
+              <div class="foto-slide" style="background-image: url('assets/images/semarang\ nc.jpg');"></div>
+              <div class="p-3 bg-secondary rounded">
+                <h5>Foto Bersama Pagar Betis SNC</h5>
+                
+              </div>
+            </div>
+
+             <!-- Foto 2 -->
+            <div class="carousel-item text-center">
+              <div class="foto-slide" style="background-image: url('assets/images/hari\ pramuka.jpg');"></div>
+              <div class="p-3 bg-secondary rounded">
+                <h5>Hari Pramuka</h5>
+                
+              </div>
+            </div>
+
+             <!-- Foto 2 -->
+            <div class="carousel-item text-center">
+              <div class="foto-slide" style="background-image: url('assets/images/bedugul.jpg');"></div>
+              <div class="p-3 bg-secondary rounded">
+                <h5>Danau Bedugul</h5>
+              
+              </div>
+            </div>
+
+             <!-- Foto 2 -->
+            <div class="carousel-item text-center">
+              <div class="foto-slide" style="background-image: url('assets/images/aldy.jpg');"></div>
+              <div class="p-3 bg-secondary rounded">
+                <h5>Foto bersama Adik</h5>
+                <p></p>
+              </div>
+            </div>
+
+             <!-- Foto 2 -->
+            <div class="carousel-item text-center">
+              <div class="foto-slide" style="background-image: url('assets/images/bandara.jpg');"></div>
+              <div class="p-3 bg-secondary rounded">
+                <h5>Foto Panitia Pelantikan Pramuka</h5>
+               </div>
+            </div>
+
+             <!-- Foto 2 -->
+            <div class="carousel-item text-center">
+              <div class="foto-slide" style="background-image: url('assets/images/rt\ 1.jpg');"></div>
+              <div class="p-3 bg-secondary rounded">
+                <h5>Karang Taruna</h5>
+                <p></p>
+              </div>
+            </div>
+
+             <!-- Foto 2 -->
+            <div class="carousel-item text-center">
+              <div class="foto-slide" style="background-image: url('assets/images/win.jpg');"></div>
+              <div class="p-3 bg-secondary rounded">
+                <h5>Foto Saat Menang lomba Kartini</h5>
+                </div>
+            </div>
+
+             <!-- Foto 2 -->
+            <div class="carousel-item text-center">
+              <div class="foto-slide" style="background-image: url('assets/images/bukber.jpg');"></div>
+              <div class="p-3 bg-secondary rounded">
+                <h5>Foto Buka Bdersama Kelas</h5>
+                </div>
+            </div>
+
+             <!-- Foto 2 -->
+            <div class="carousel-item text-center">
+              <div class="foto-slide" style="background-image: url('assets/images/telomoyo.jpg');"></div>
+              <div class="p-3 bg-secondary rounded">
+                <h5>Telomoyo</h5>
+                <p></p>
+              </div>
+            </div>
+
+             <!-- Foto 2 -->
+            <div class="carousel-item text-center">
+              <div class="foto-slide" style="background-image: url('assets/images/andong.jpg');"></div>
+              <div class="p-3 bg-secondary rounded">
+                <h5>Foto Gunung Andong</h5>
+                
+              </div>
+            </div>
+
+             <!-- Foto 20 -->
+            <div class="carousel-item text-center">
+              <div class="foto-slide" style="background-image: url('assets/images/stikubank.jpg');"></div>
+              <div class="p-3 bg-secondary rounded">
+                <h5>seminar Youth Camp</h5>
+                </div>
+            </div>
+            </div>
+
+          <!-- Tombol Navigasi Oranye -->
+          <button class="carousel-control-prev custom-control" type="button" data-bs-target="#galeriCarousel" data-bs-slide="prev">
+            <span class="custom-icon">&#10094;</span>
+          </button>
+          <button class="carousel-control-next custom-control" type="button" data-bs-target="#galeriCarousel" data-bs-slide="next">
+            <span class="custom-icon">&#10095;</span>
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Bootstrap Bundle JS (wajib agar modal & carousel jalan) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Modal TK -->
+<div class="modal fade" id="tkModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header">
+        <h5 class="modal-title">TK Tunas Bangsa 4</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+<div class="modal-body text-center">
+  <img src="assets/images/tk.jpg" alt="TK Tunas Bangsa 4" class="modal-img rounded">
+</div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Modal SD -->
+<div class="modal fade" id="sdModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header">
+        <h5 class="modal-title">SDN Ngaliyan 01 Semarang</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <!-- Contoh di salah satu modal -->
+<div class="modal-body text-center">
+  <img src="assets/images/sd.jpg" alt="SDN Ngaliyan 01 Semarang" class="modal-img rounded">
+</div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Modal SMP -->
+<div class="modal fade" id="smpModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header">
+        <h5 class="modal-title">SMP Texmaco Semarang</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+     <!-- Contoh di salah satu modal -->
+<div class="modal-body text-center">
+  <img src="assets/images/smp.jpeg" alt="SMP Texmaco Semarang" class="modal-img rounded">
+</div>
+
+    </div>
+  </div>
+</div>
+
+<!-- Modal SMK -->
+<div class="modal fade" id="smkModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content bg-dark text-white">
+      <div class="modal-header">
+        <h5 class="modal-title">SMK Texmaco Semarang</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body text-center">
+        <p></p>
+        <img src="assets/images/SMK TEXMACO SEMARANG.jpg" alt="SMK Texmaco Semarang" class="modal-img rounded">
+      </div>
+    </div>
+  </div>
+</div>
+
+        <!--POP UP Karya-->
+<!-- Modal Karya -->
+<div class="modal fade" id="karyaModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content bg-dark text-white rounded-4 shadow-lg">
+      <div class="modal-header border-0">
+        <h5 class="modal-title">Karya Saya</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+
+        <!-- Carousel -->
+        <div id="karyaCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner text-center">
+
+            <!-- Item 1 -->
+            <div class="carousel-item active">
+              <h4> Semarang Night Carnaval</h4>
+              <img src="assets/images/snc.jpg" class="img-fluid d-block mx-auto rounded mb-3" style="max-width:70%; height:auto;">
+              <p>Bertugas sebgaia Logistik dan Penanggung Jawab pagar Betis Pramuka</p>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="carousel-item">
+              <h4>Karnaval Dugderan</h4>
+              <img src="assets/images/dug.jpg" class="img-fluid d-block mx-auto rounded mb-3" style="max-width:70%; height:auto;">
+              <p>Bertugas sebagai Penanggung Jawab Pagar Betis Pramuka</p>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="carousel-item">
+              <h4>Peringatan Hari Kartini</h4>
+              <img src="assets/images/kartini.jpg" class="img-fluid d-block mx-auto rounded mb-3" style="max-width:70%; height:auto;">
+              <p>Bertugas Sebagai Kordinator Aacara</p>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="carousel-item">
+              <h4>MPLS</h4>
+              <img src="assets/images/mpls.jpg" class="img-fluid d-block mx-auto rounded mb-3" style="max-width:70%; height:auto;">
+              <p>Bertugas sebagai Divisi Kegiatan.</p>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="carousel-item">
+              <h4>Pelantikan Penegak Bantara
+              <img src="assets/images/bandara.jpg" class="img-fluid d-block mx-auto rounded mb-3" style="max-width:70%; height:auto;">
+              <p>Berposisi sebagai Divisi Kegiatan.</p>
+            </div>
+
+            <!-- Item 6 -->
+            <div class="carousel-item">
+              <h4>Purnawiyata 2025</h4>
+              <img src="assets/images/Purna.jpg" class="img-fluid d-block mx-auto rounded mb-3" style="max-width:70%; height:auto;">
+              <p>Bertugas sebagai Bidang Umum.</p>
+            </div>
+
+           
+
+          </div>
+
+          <!-- Tombol geser -->
+          <button class="carousel-control-prev" type="button" data-bs-target="#karyaCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon bg-dark rounded-circle p-3"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#karyaCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon bg-dark rounded-circle p-3"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+      </div>
+      <div class="modal-footer border-0">
+        <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Tutup</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+        
+</body>
+
+</html>
+
+<style>.edu-list p {
+  margin: 6px 0;
+  font-size: 16px;
+}
+
+.edu-list a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #ffd700; /* warna link biar keliatan */
+  cursor: pointer;
+}
+
+.edu-list a:hover {
+  text-decoration: underline;
+}
+</style>
+
+
+
+<style>
+
+  
+  .about-section {
+    display: flex;
+    justify-content: center;   /* center horizontal */
+    align-items: center;       /* center vertical */
+    min-height: 100vh;         /* penuh 1 layar */
+  }
+.video-full {
+  width: 70%;          /* lebar penuh */
+  height: 400px;    /* batasi tinggi max 400px */
+  object-fit: cover;    /* crop biar tetap proporsional */
+  display: block;
+   margin: 0 auto; 
+}
+  .extra-box {
+    background: rgba(0, 0, 0, 0.7); /* transparan hitam */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;            /* teks di tengah */
+    color: orange;                 /* teks warna orange */
+    margin: 0 auto;
+    max-width: 1900px;              /* lebar kolom */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4); /* biar ada efek bayangan */
+  }
+
+  .extra-box h4 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: orange; /* judul orange */
+  }
+
+  .extra-box p {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  html {
+  scroll-behavior: smooth;
+}
+
+
+.video-kiri {
+  max-width: 300px;   /* batasi lebar maksimal video */
+  width: 100%;        /* supaya tetap responsif */
+  height: auto;       /* jaga proporsi */
+  border-radius: 12px; /* opsional: sudut melengkung */
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .video-kiri {
+    max-width: 200px; /* lebih kecil di HP */
+  }
+}
+
+/* Tombol Navigasi Oranye */
+.custom-control {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: orange;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.9;
+  transition: 0.3s;
+}
+
+.custom-control:hover {
+  background: darkorange;
+  opacity: 1;
+}
+
+.custom-icon {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Semua gambar carousel sama tinggi dan menempel */
+.foto-slide {
+  width: 100%;
+  height: 400px;            /* Atur tinggi sesuai kebutuhan */
+  background-size: cover;    /* Gambar memenuhi area */
+  background-position: center;
+  border-radius: 0.5rem;
+}
+
+.carousel-inner {
+  padding: 0;  /* Hilangkan jarak ekstra */
+}
+
+/* Hapus garis bawah header modal galeri */
+#galeriModal .modal-header {
+  border-bottom: none;
+}
+POP UP RIWAYAT PENDIDIKAN
+.timeline {
+  border-left: 3px solid #fff; /* garis timeline */
+  padding-left: 20px;
+  margin-top: 20px;
+}
+
+.timeline-item {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -11px;
+  top: 5px;
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.timeline-item .year {
+  font-weight: bold;
+  color: #ffcc00; /* biar beda warna */
+  display: block;
+  margin-bottom: 5px;
+}
+
+.timeline-item p {
+  margin: 0;
+  color: #fff;
+}
+
+.timeline-item a {
+  color: #00c3ff;
+  text-decoration: none;
+}
+
+.timeline-item a:hover {
+  text-decoration: underline;
+}
+
+.timeline {
+  position: relative;
+  margin-left: 20px; /* kasih ruang dari kiri */
+  padding-left: 20px;
+  border-left: 2px solid #fff;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 20px;
+  padding-left: 30px; /* jarak teks dari bullet */
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -10px; /* geser bullet dari garis */
+  top: 5px;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+/* Styling gambar di dalam modal */
+.modal-body {
+  text-align: center; /* bikin konten di tengah */
+}
+
+.modal-body img {
+  max-width: 80%;   /* biar gak terlalu besar */
+  height: auto;     /* biar proporsional */
+  display: block;   /* biar bisa margin auto */
+  margin: 15px auto; /* kasih jarak atas bawah */
+  border-radius: 10px; /* biar lebih halus */
+}
+
+</style>
+<style> jangan di apa apain
+#tabs-2 .row {
+  min-height: 400px; /* kasih tinggi minimum biar lebih seimbang */
+}
+
+
+/* bikin row jadi flex dan tinggi sejajar */
+.equal-height {
+  display: flex;
+  align-items: center;
+  min-height: 400px; /* atur sesuai selera */
+}
+
+/* kolom kiri (gambar) */
+.image-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* kolom kanan (teks) */
+.text-box {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* biar teks gak nempel langsung */
+.text-box .content {
+  padding: 20px;
+}
+
+</style>
+
+
+<style>/* Tombol carousel custom */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: orange !important; /* warna oranye */
+  border-radius: 50%;                  /* bulat */
+  width: 50px;
+  height: 50px;
+  background-size: 60% 60%;
+}
+
+/* Tambahan efek hover biar lebih cakep */
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+  background-color: #ff8800 !important; /* oranye lebih gelap */
+}
+
+/* Gambar di dalam pop-up Karya */
+#karyaModal .modal-body img {
+  max-width: 500px;   /* batas lebar gambar */
+  width: 100%;        /* biar responsif */
+  height: auto;       /* proporsional */
+  margin: 0 auto 15px auto; /* center + jarak bawah */
+  display: block;
+  object-fit: contain; /* jaga proporsi */
+}
+
+/* Atur ukuran semua gambar di dalam modal Karya */
+#karyaModal .carousel-item img {
+  max-width: 60% !important;  /* gambar maksimal 60% dari lebar modal */
+  max-height: 400px !important; /* tinggi maksimal biar konsisten */
+  width: auto !important;
+  height: auto !important;
+  margin: 0 auto 15px auto; /* center + jarak bawah */
+  display: block;
+  object-fit: contain; /* biar gak ketarik */
+}
+/* Semua gambar dalam modal Karya punya ukuran seragam */
+#karyaModal .carousel-item img {
+  width: 100%;
+  max-width: 500px;     /* batas lebar */
+  height: 300px;        /* tinggi fix biar seragam */
+  object-fit: cover;    /* crop gambar supaya pas */
+  display: block;
+  margin: 0 auto 15px auto; /* rata tengah + jarak bawah */
+  border-radius: 10px;
+}
+
+</style>
+
+<style>.custom-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+  padding: 0;
+  list-style: none;
+}
+
+.custom-tabs li {
+  margin: 0;
+}
+
+.custom-tabs .tab-link {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #222;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.custom-tabs .tab-link:hover {
+  background: #444;
+  color: #ff9800;
+}
+
+.custom-tabs .tab-link.active {
+  background: #ff9800;
+  color: #fff;
+  box-shadow: 0 4px 10px rgba(255, 152, 0, 0.4);
+}
+</style>
+
+<script>
+  document.querySelectorAll('.tab-link').forEach(link => {
+    link.addEventListener('click', function() {
+      document.querySelectorAll('.tab-link').forEach(btn => btn.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+</script>
+
+<style>.custom-tabs.custom-tabs /* Hilangkan list-style dan padding bawaan */
+.custom-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 30px; /* kasih jarak antar tombol */
+  margin-bottom: 40px;
+  padding: 0;
+  list-style: none; 
+}
+
+.custom-tabs li {
+  margin: 0;
+}
+
+/* Tombol */
+.custom-tabs .tab-link {
+  display: flex;             /* biar teks bisa rata tengah */
+  align-items: center;       /* rata tengah vertikal */
+  justify-content: center;   /* rata tengah horizontal */
+  min-width: 160px;          /* biar tombol punya lebar seragam */
+  padding: 12px 30px;
+  background: #1a1a1a;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  position: relative;
+}
+
+/* Hilangkan kotak putih bawaan plugin */
+.custom-tabs .tab-link::before,
+.custom-tabs .tab-link::after {
+  display: none !important;
+  content: none !important;
+}
+
+/* Hover effect */
+.custom-tabs .tab-link:hover {
+  background: linear-gradient(135deg, #ff9800, #ff5722);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(255,152,0,0.4);
+}
+
+/* Active tab */
+.custom-tabs .tab-link.active {
+  background: linear-gradient(135deg, #ff9800, #ff5722);
+  color: #fff;
+  box-shadow: 0 6px 15px rgba(255,152,0,0.5);
+}
+
+</style>
+
+<script>
+  document.querySelectorAll('.tab-link').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      document.querySelectorAll('.tab-link').forEach(btn => btn.classList.remove('active'));
+      this.classList.add('active');
+    });
+  });
+</script>
+
+<style>
+/* Semua item default */
+.carousel-item {
+  opacity: 0;
+  transition: none;
+}
+
+/* Item aktif dengan animasi tirai atas-bawah */
+.carousel-item.active {
+  opacity: 1;
+  animation: curtainVertical 1s ease forwards;
+}
+
+/* Animasi tirai atas-bawah */
+@keyframes curtainVertical {
+  0% {
+    clip-path: inset(50% 0 50% 0); /* tertutup dari atas & bawah */
+  }
+  100% {
+    clip-path: inset(0 0 0 0); /* terbuka penuh */
+  }
+}
+
+/* Pastikan tombol di atas gambar */
+.carousel-control-prev,
+.carousel-control-next {
+  z-index: 10;
+}
+
+
+.owl-dots {
+  display: none !important;
+}
+
+</style>
+
+<style>.modal-img {
+  width: 100%;        /* biar selalu penuh lebarnya */
+  max-width: 600px;   /* batas maksimal lebar gambar */
+  height: 400px;      /* semua tinggi gambar dibuat sama */
+  object-fit: cover;  /* biar gambar ter-crop rapi, nggak ketarik aneh */
+  display: block;
+  margin: 0 auto;     /* posisi tengah */
+}
+</style>
