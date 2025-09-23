@@ -208,12 +208,14 @@ p.no-justify {
   </header>
 
   <!-- ***** Main Banner Area Start ***** -->
-  <section class="section main-banner" id="top" data-section="section1">
-  <video autoplay muted loop id="bg-video" playsinline
-         style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; z-index:-1;">
-      <source src="https://drive.google.com/uc?export=download&id=14EKEEBaKsx2HOSwd_0MPavUz0e-fu4Zh" type="video/mp4" />
-  </video>
+ <section class="section main-banner" id="top" data-section="section1" style="position:relative; height:100vh; overflow:hidden;">
 
+  <!-- Background gambar -->
+  <img src="assets/images/SMK TEXMACO SEMARANG.jpg" 
+       alt="Background" 
+       style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; z-index:-1;">
+
+  <!-- Overlay konten -->
   <div class="video-overlay header-text" style="position:relative; z-index:1; text-align:center; color:white;">
       <div class="caption">
           <h6>SMK Texmaco Semarang</h6>
@@ -223,7 +225,9 @@ p.no-justify {
           </div>
       </div>
   </div>
+
 </section>
+
 
   <!-- ***** Main Banner Area End ***** -->
 
