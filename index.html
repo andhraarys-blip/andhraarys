@@ -472,7 +472,8 @@ p.no-justify {
                 <img src="assets/images/logo smk.jpg" alt="Author 1">
               </div>
               <div class="text-button-pay">
-                <a href="#">Info RPL <i class="fa fa-angle-double-right"></i></a>
+               <a href="javascript:void(0)" onclick="openModal('Info RPL')">Info RPL <i class="fa fa-angle-double-right"></i></a>
+
               </div>
             </div>
           </div>
@@ -486,7 +487,7 @@ p.no-justify {
                 <img src="assets/images/logo smk.jpg" alt="Author 2">
               </div>
               <div class="text-button-free">
-                <a href="#">Info TKJ <i class="fa fa-angle-double-right"></i></a>
+               <a href="javascript:void(0)" onclick="openModal('Info TKJ')">Info TKJ <i class="fa fa-angle-double-right"></i></a>
               </div>
             </div>
           </div>
@@ -499,7 +500,7 @@ p.no-justify {
                 <img src="assets/images/logo smk.jpg" alt="Author 3">
               </div>
               <div class="text-button-pay">
-                <a href="#">Info TEI <i class="fa fa-angle-double-right"></i></a>
+               <a href="javascript:void(0)" onclick="openModal('Info TEI')">Info TEI <i class="fa fa-angle-double-right"></i></a>
               </div>
             </div>
           </div>
@@ -512,7 +513,7 @@ p.no-justify {
                 <img src="assets/images/logo smk.jpg" alt="Author 4">
               </div>
               <div class="text-button-free">
-                <a href="#">Info TKR <i class="fa fa-angle-double-right"></i></a>
+               <a href="javascript:void(0)" onclick="openModal('Info TKR')">Info TKR <i class="fa fa-angle-double-right"></i></a>
               </div>
             </div>
           </div>
@@ -525,7 +526,7 @@ p.no-justify {
                 <img src="assets/images/logo smk.jpg" alt="">
               </div>
               <div class="text-button-pay">
-                <a href="#">Info TPSB <i class="fa fa-angle-double-right"></i></a>
+                <a href="javascript:void(0)" onclick="openModal('Info TPSB')">Info TPSB <i class="fa fa-angle-double-right"></i></a>
               </div>
             </div>
           </div>
@@ -538,7 +539,7 @@ p.no-justify {
                 <img src="assets/images/logo smk.jpg" alt="">
               </div>
               <div class="text-button-free">
-                <a href="#">Info TB <i class="fa fa-angle-double-right"></i></a>
+          <a href="javascript:void(0)" onclick="openModal('Info TB')">Info TB <i class="fa fa-angle-double-right"></i></a>
               </div>
             </div>
           </div>
@@ -551,7 +552,7 @@ p.no-justify {
                 <img src="assets/images/logo smk.jpg" alt="">
               </div>
               <div class="text-button-free">
-                <a href="#">Info TP <i class="fa fa-angle-double-right"></i></a>
+                <a href="javascript:void(0)" onclick="openModal('Info TP')">Info TP <i class="fa fa-angle-double-right"></i></a>
               </div>
             </div>
           </div>
@@ -772,6 +773,7 @@ p.no-justify {
   </div>
 </div>
 
+
 <!-- Contoh tombol buka popup -->
 <div style="display:flex; flex-wrap:wrap; gap:10px; margin:20px;">
   <button onclick="openModal('Info RPL')">Info RPL</button>
@@ -785,13 +787,13 @@ p.no-justify {
 
 <script>
 const courses = {
-  "Info RPL": { title: "Rekayasa Perangkat Lunak", content: "Bidang studi yang mengajarkan prinsip dan teknik ...", video: "https://www.youtube.com/embed/UW0sY_V_Qms?autoplay=1&mute=1&loop=1&playlist=UW0sY_V_Qms" },
-  "Info TKJ": { title: "Teknik Komputer dan Jaringan", content: "Program keahlian di bidang teknologi informasi ...", video: "https://www.youtube.com/embed/UW0sY_V_Qms?autoplay=1&mute=1&loop=1&playlist=UW0sY_V_Qms" },
-  "Info TEI": { title: "Teknik Elektronika Industri", content: "Bidang teknik yang fokus pada perancangan ...", video: "https://www.youtube.com/embed/UW0sY_V_Qms?autoplay=1&mute=1&loop=1&playlist=UW0sY_V_Qms" },
-  "Info TP": { title: "Teknik Permesinan", content: "Bidang keahlian yang mempersiapkan siswa ...", video: "https://www.youtube.com/embed/UW0sY_V_Qms?autoplay=1&mute=1&loop=1&playlist=UW0sY_V_Qms" },
-  "Info TB": { title: "Tata Busana", content: "Program studi yang fokus pada desain ...", video: "https://www.youtube.com/embed/UW0sY_V_Qms?autoplay=1&mute=1&loop=1&playlist=UW0sY_V_Qms" },
-  "Info TPSB": { title: "Teknik Pemintalan Serat Buatan", content: "Program kejuruan yang mendalami proses ...", video: "https://www.youtube.com/embed/UW0sY_V_Qms?autoplay=1&mute=1&loop=1&playlist=UW0sY_V_Qms" },
-  "Info TKR": { title: "Teknik Kendaraan Ringan", content: "Program keahlian di Sekolah Menengah Kejuruan ...", video: "https://www.youtube.com/embed/UW0sY_V_Qms?autoplay=1&mute=1&loop=1&playlist=UW0sY_V_Qms" }
+  "Info RPL": { title: "Rekayasa Perangkat Lunak", content: "Disiplin ilmu yang Mempelajari pengoperasian Software.", video: "https://www.youtube.com/embed/UW0sY_V_Qms?autoplay=1&mute=1&loop=1&playlist=UW0sY_V_Qms" },
+  "Info TKJ": { title: "Teknik Komputer dan Jaringan", content: "Bidang keahlian di bidang Teknologi Informasi dan Komunikasi.", video: "https://www.youtube.com/embed/UW0sY_V_Qms?autoplay=1&mute=1&loop=1&playlist=UW0sY_V_Qms" },
+  "Info TEI": { title: "Teknik Elektronika Industri", content: "Bidang keahlian yang berfokus pada perancangan Elektronik.", video: "https://www.youtube.com/embed/UW0sY_V_Qms?autoplay=1&mute=1&loop=1&playlist=UW0sY_V_Qms" },
+  "Info TKR": { title: "Teknik Kendaraan Ringan", content: "Pembelajaran ilmu dan praktik perbaikan serta perawatan kendaraan roda 4.", video: "https://www.youtube.com/embed/UW0sY_V_Qms?autoplay=1&mute=1&loop=1&playlist=UW0sY_V_Qms" },
+  "Info TPSB": { title: "Teknik Pemintalan Serat Buatan", content: "Pendidikan yang mengajarkan proses pembuatan serat buatan.", video: "https://www.youtube.com/embed/UW0sY_V_Qms?autoplay=1&mute=1&loop=1&playlist=UW0sY_V_Qms" },
+  "Info TB": { title: "Tata Busana", content: "Disiplin ilmu dan seni dalam merancang, mendesain, dan membuat pakaian.", video: "https://www.youtube.com/embed/UW0sY_V_Qms?autoplay=1&mute=1&loop=1&playlist=UW0sY_V_Qms" },
+  "Info TP": { title: "Teknik Permesinan", content: "Fokus pada produksi komponen mesin serta komponen peralatan industri.", video: "https://www.youtube.com/embed/UW0sY_V_Qms?autoplay=1&mute=1&loop=1&playlist=UW0sY_V_Qms" }
 };
 
 const modal = document.getElementById("courseModal");
@@ -807,9 +809,7 @@ function openModal(key) {
   modalTitle.innerText = course.title;
   modalContent.innerText = course.content;
 
-  modalVideoContainer.innerHTML = `
-    <iframe src="${course.video}" frameborder="0" allow="autoplay; fullscreen" style="width:100%; height:100%;"></iframe>
-  `;
+  modalVideoContainer.innerHTML = `<iframe src="${course.video}" frameborder="0" allow="autoplay; fullscreen" style="width:100%; height:100%;"></iframe>`;
   modalVideoContainer.style.display = "block";
 
   modal.style.display = "flex";
@@ -817,8 +817,9 @@ function openModal(key) {
 
 modalClose.onclick = function() {
   modal.style.display = "none";
-  modalVideoContainer.innerHTML = ""; // stop video saat popup ditutup
+  modalVideoContainer.innerHTML = ""; // stop video
 }
+
 </script>
 
 
