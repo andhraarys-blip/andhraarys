@@ -208,10 +208,14 @@ p.no-justify {
   </header>
 
   <!-- ***** Main Banner Area Start ***** -->
-  <section class="section main-banner" id="top" data-section="section1">
-      <video autoplay muted loop id="bg-video">
-          <source src="assets/images/DJI_0533.MP4" type="video/mp4" />
-      </video>
+ <section class="section main-banner" id="top" data-section="section1" style="position:relative; height:100vh; overflow:hidden;">
+  <!-- iframe video background -->
+  <iframe src="https://drive.google.com/file/d/14EKEEBaKsx2HOSwd_0MPavUz0e-fu4Zh/preview"
+          frameborder="0"
+          allow="autoplay"
+          allowfullscreen
+          style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; z-index:-1;">
+  </iframe>
 
       <div class="video-overlay header-text">
           <div class="caption">
