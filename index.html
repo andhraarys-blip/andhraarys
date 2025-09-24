@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -759,28 +760,10 @@ p.no-justify {
     <span id="modalClose" style="position:absolute; top:10px; right:15px; cursor:pointer; font-size:28px; color:#ffcc00;">&times;</span>
     <h3 id="modalTitle" style="color:#ffcc00;"></h3>
     <p id="modalContent"></p>
-    
-    <!-- Video lokal -->
     <video id="modalVideo" width="100%" controls autoplay style="margin-top:15px; display:none;" muted>
       <source id="modalVideoSrc" src="" type="video/mp4">
-      Browser kamu tidak mendukung video.
+      Your browser does not support the video tag.
     </video>
-    
-    <!-- Video YouTube -->
-    <iframe id="modalIframe" width="100%" height="315" style="margin-top:15px; display:none;" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-  </div>
-</div>
-
-<script>
-<!-- Modal Popup -->
-<div id="courseModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); justify-content:center; align-items:center; z-index:9999;">
-  <div id="modalContentBox" style="background:#111; color:#fff; padding:30px; border-radius:10px; max-width:600px; width:90%; position:relative; text-align:left;">
-    <span id="modalClose" style="position:absolute; top:10px; right:15px; cursor:pointer; font-size:28px; color:#ffcc00;">&times;</span>
-    <h3 id="modalTitle" style="color:#ffcc00;"></h3>
-    <p id="modalContent"></p>
-    
-    <!-- Video YouTube -->
-    <iframe id="modalIframe" width="100%" height="315" style="margin-top:15px; display:none;" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
   </div>
 </div>
 
@@ -788,38 +771,38 @@ p.no-justify {
 const courses = {
   "Info RPL": {
     title: "Rekayasa Perangkat Lunak",
-    content: "Bidang studi ...",
-    video: "https://www.youtube.com/embed/UW0sY_V_Qms?autoplay=1&rel=0"
+    content: "Bidang studi yang mengajarkan prinsip dan teknik untuk merancang, mengembangkan, menguji, dan memelihara perangkat lunak (software). Pembelajaran di jurusan ini berfokus pada pemrograman, analisis algoritma, desain sistem, manajemen proyek perangkat lunak, dan basis data, dengan tujuan menciptakan aplikasi desktop, mobile, web, hingga sistem informasi. ",
+    video: "https://youtu.be/UW0sY_V_Qms?si=3vJwh9JHc2lVD8Uw"
   },
   "Info TKJ": {
     title: "Teknik Komputer dan Jaringan",
-    content: "Program keahlian ...",
-    video: "https://www.youtube.com/embed/f3qF6YpDDqc?autoplay=1&rel=0"
+    content: "Program keahlian di bidang teknologi informasi yang mendidik siswa untuk menguasai perakitan, konfigurasi, pengelolaan, dan pemeliharaan perangkat keras (hardware) komputer serta sistem jaringan komputer, mulai dari perakitan komputer, instalasi sistem operasi, hingga membangun dan mengamankan jaringan lokal (LAN) hingga jaringan luas (WAN).",
+    video: "assets/video/komputer.mp4"
   },
   "Info TEI": {
     title: "Teknik Elektronika Industri",
-    content: "Bidang teknik ...",
-    video: "https://www.youtube.com/embed/pvpzjf1aaPs?autoplay=1&rel=0"
+    content: "Bidang teknik yang fokus pada perancangan, perakitan, pengoperasian, dan pemeliharaan sistem kontrol elektronik serta otomatisasi dalam proses industri. Jurusan ini mendidik siswa untuk menciptakan solusi teknologi yang meningkatkan efisiensi dan daya saing industri, serta mempersiapkan mereka untuk karir di bidang otomasi, robotika, dan instrumentas.",
+    video: "assets/video/elektro.mp4"
   },
   "Info TP": {
     title: "Teknik Permesinan",
-    content: "Bidang keahlian ...",
-    video: "https://www.youtube.com/embed/zAW8h9w61xY?autoplay=1&rel=0"
+    content: "Bidang keahlian yang mempersiapkan siswa untuk menjadi tenaga ahli terampil dalam merancang, membuat, dan merawat mesin serta komponen mekanik menggunakan berbagai mesin perkakas seperti bubut, frais, gerinda, dan CNC. Fokus utama jurusan ini adalah pada proses manufaktur dan produksi barang-barang teknik yang dibutuhkan dalam berbagai sektor industri.",
+    video: "assets/video/mesin.mp4"
   },
   "Info TB": {
     title: "Tata Busana",
-    content: "Program studi ...",
-    video: "https://www.youtube.com/embed/b5XWSspbywY?autoplay=1&rel=0"
+    content: "program studi yang fokus pada desain, pembuatan, dan pengelolaan produk busana. Siswa mempelajari teknik dasar membuat desain, pola, dan menjahit, serta menganalisis tren fashion, marketing, dan manajemen bisnis di industri busana. Selain itu Siswa Juga diajari untuk membuat dan mendesain Hiasan Pada Pakaian yang dirancang.",
+    video: "assets/video/baju.mp4"
   },
   "Info TPSB": {
     title: "Teknik Pemintalan Serat Buatan",
-    content: "Program kejuruan ...",
-    video: "https://www.youtube.com/embed/MMLYi8PUAaM?autoplay=1&rel=0"
+    content: "Program kejuruan yang mendalami proses pembuatan serat, termasuk proses polimerisasi dan pemintalan melalui spinneret. Jurusan ini membekali siswa dengan pengetahuan dan keterampilan praktis dalam mengoperasikan mesin pemintalan, mengendalikan kualitas produksi, dan memahami prinsip dasar kimia serta fisika serat yang digunakan dalam industri tekstil.",
+    video: "assets/video/tekstil.mp4"
   },
   "Info TKR": {
     title: "Teknik Kendaraan Ringan",
-    content: "Program keahlian ...",
-    video: "https://www.youtube.com/embed/sIxgSGPbmkg?autoplay=1&rel=0"
+    content: "Program keahlian di Sekolah Menengah Kejuruan (SMK) yang fokus pada pembelajaran perawatan, perbaikan, dan sistem kerja kendaraan bermotor ringan, seperti mobil. Siswa akan dibekali pengetahuan teori dan keterampilan praktik untuk mendiagnosis dan mengatasi berbagai masalah pada komponen mesin, kelistrikan, sasis, dan sistem pengereman otomotif.",
+    video: "assets/video/mobil.mp4"
   }
 };
 
@@ -827,7 +810,8 @@ const modal = document.getElementById('courseModal');
 const modalTitle = document.getElementById('modalTitle');
 const modalContent = document.getElementById('modalContent');
 const modalClose = document.getElementById('modalClose');
-const modalIframe = document.getElementById('modalIframe');
+const modalVideo = document.getElementById('modalVideo');
+const modalVideoSrc = document.getElementById('modalVideoSrc');
 
 // Event listener tombol
 document.querySelectorAll('.text-button-pay a, .text-button-free a').forEach(btn => {
@@ -835,34 +819,42 @@ document.querySelectorAll('.text-button-pay a, .text-button-free a').forEach(btn
     e.preventDefault();
     const text = this.textContent.trim().split(' ').slice(0,2).join(' '); // ambil "Info RPL", "Info TKJ", dll
     if(courses[text]){
+      // Set title & content
       modalTitle.innerText = courses[text].title;
       modalContent.innerText = courses[text].content;
 
-      // set video iframe
-      modalIframe.src = courses[text].video;
-      modalIframe.style.display = 'block';
+      // Set video
+      if(courses[text].video){
+        modalVideoSrc.src = courses[text].video;
+        modalVideo.style.display = 'block';
+        modalVideo.load();
+        modalVideo.play();
+      } else {
+        modalVideo.src = '';
+        modalVideo.style.display = 'none';
+      }
 
+      // Tampilkan modal
       modal.style.display = 'flex';
     }
   });
 });
 
-// Close modal
-modalClose.onclick = function() {
-  modal.style.display = "none";
-  modalIframe.src = ""; // reset biar video stop
-};
-</script>
-
-// Close modal
-modalClose.onclick = function() {
-  modal.style.display = "none";
+// Tutup modal
+modalClose.addEventListener('click', () => {
+  modal.style.display = 'none';
   modalVideo.pause();
-  modalVideoSrc.src = "";
-  modalIframe.src = "";
-};
-</script>
+  modalVideo.currentTime = 0;
+});
 
+// Klik di luar modal
+window.addEventListener('click', (e) => {
+  if(e.target === modal){
+    modal.style.display = 'none';
+    modalVideo.pause();
+    modalVideo.currentTime = 0;
+  }
+});
 </script>
 
 
