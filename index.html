@@ -759,10 +759,15 @@ p.no-justify {
     <span id="modalClose" style="position:absolute; top:10px; right:15px; cursor:pointer; font-size:28px; color:#ffcc00;">&times;</span>
     <h3 id="modalTitle" style="color:#ffcc00;"></h3>
     <p id="modalContent"></p>
+    
+    <!-- Video lokal -->
     <video id="modalVideo" width="100%" controls autoplay style="margin-top:15px; display:none;" muted>
       <source id="modalVideoSrc" src="" type="video/mp4">
-      Your browser does not support the video tag.
+      Browser kamu tidak mendukung video.
     </video>
+    
+    <!-- Video YouTube -->
+    <iframe id="modalIframe" width="100%" height="315" style="margin-top:15px; display:none;" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
   </div>
 </div>
 
@@ -770,38 +775,38 @@ p.no-justify {
 const courses = {
   "Info RPL": {
     title: "Rekayasa Perangkat Lunak",
-    content: "Bidang studi yang mengajarkan prinsip dan teknik untuk merancang, mengembangkan, menguji, dan memelihara perangkat lunak (software). Pembelajaran di jurusan ini berfokus pada pemrograman, analisis algoritma, desain sistem, manajemen proyek perangkat lunak, dan basis data, dengan tujuan menciptakan aplikasi desktop, mobile, web, hingga sistem informasi. ",
-    video: "https://youtu.be/UW0sY_V_Qms?si=3vJwh9JHc2lVD8Uw"
+    content: "Bidang studi ...",
+    video: "https://www.youtube.com/embed/UW0sY_V_Qms?autoplay=1&rel=0"
   },
   "Info TKJ": {
     title: "Teknik Komputer dan Jaringan",
-    content: "Program keahlian di bidang teknologi informasi yang mendidik siswa untuk menguasai perakitan, konfigurasi, pengelolaan, dan pemeliharaan perangkat keras (hardware) komputer serta sistem jaringan komputer, mulai dari perakitan komputer, instalasi sistem operasi, hingga membangun dan mengamankan jaringan lokal (LAN) hingga jaringan luas (WAN).",
-    video: "assets/video/komputer.mp4"
+    content: "Program keahlian ...",
+    video: "https://www.youtube.com/embed/f3qF6YpDDqc?autoplay=1&rel=0"
   },
   "Info TEI": {
     title: "Teknik Elektronika Industri",
-    content: "Bidang teknik yang fokus pada perancangan, perakitan, pengoperasian, dan pemeliharaan sistem kontrol elektronik serta otomatisasi dalam proses industri. Jurusan ini mendidik siswa untuk menciptakan solusi teknologi yang meningkatkan efisiensi dan daya saing industri, serta mempersiapkan mereka untuk karir di bidang otomasi, robotika, dan instrumentas.",
-    video: "assets/video/elektro.mp4"
+    content: "Bidang teknik ...",
+    video: "https://www.youtube.com/embed/pvpzjf1aaPs?autoplay=1&rel=0"
   },
   "Info TP": {
     title: "Teknik Permesinan",
-    content: "Bidang keahlian yang mempersiapkan siswa untuk menjadi tenaga ahli terampil dalam merancang, membuat, dan merawat mesin serta komponen mekanik menggunakan berbagai mesin perkakas seperti bubut, frais, gerinda, dan CNC. Fokus utama jurusan ini adalah pada proses manufaktur dan produksi barang-barang teknik yang dibutuhkan dalam berbagai sektor industri.",
-    video: "assets/video/mesin.mp4"
+    content: "Bidang keahlian ...",
+    video: "https://www.youtube.com/embed/zAW8h9w61xY?autoplay=1&rel=0"
   },
   "Info TB": {
     title: "Tata Busana",
-    content: "program studi yang fokus pada desain, pembuatan, dan pengelolaan produk busana. Siswa mempelajari teknik dasar membuat desain, pola, dan menjahit, serta menganalisis tren fashion, marketing, dan manajemen bisnis di industri busana. Selain itu Siswa Juga diajari untuk membuat dan mendesain Hiasan Pada Pakaian yang dirancang.",
-    video: "assets/video/baju.mp4"
+    content: "Program studi ...",
+    video: "https://www.youtube.com/embed/b5XWSspbywY?autoplay=1&rel=0"
   },
   "Info TPSB": {
     title: "Teknik Pemintalan Serat Buatan",
-    content: "Program kejuruan yang mendalami proses pembuatan serat, termasuk proses polimerisasi dan pemintalan melalui spinneret. Jurusan ini membekali siswa dengan pengetahuan dan keterampilan praktis dalam mengoperasikan mesin pemintalan, mengendalikan kualitas produksi, dan memahami prinsip dasar kimia serta fisika serat yang digunakan dalam industri tekstil.",
-    video: "assets/video/tekstil.mp4"
+    content: "Program kejuruan ...",
+    video: "https://www.youtube.com/embed/MMLYi8PUAaM?autoplay=1&rel=0"
   },
   "Info TKR": {
     title: "Teknik Kendaraan Ringan",
-    content: "Program keahlian di Sekolah Menengah Kejuruan (SMK) yang fokus pada pembelajaran perawatan, perbaikan, dan sistem kerja kendaraan bermotor ringan, seperti mobil. Siswa akan dibekali pengetahuan teori dan keterampilan praktik untuk mendiagnosis dan mengatasi berbagai masalah pada komponen mesin, kelistrikan, sasis, dan sistem pengereman otomotif.",
-    video: "assets/video/mobil.mp4"
+    content: "Program keahlian ...",
+    video: "https://www.youtube.com/embed/sIxgSGPbmkg?autoplay=1&rel=0"
   }
 };
 
@@ -811,6 +816,7 @@ const modalContent = document.getElementById('modalContent');
 const modalClose = document.getElementById('modalClose');
 const modalVideo = document.getElementById('modalVideo');
 const modalVideoSrc = document.getElementById('modalVideoSrc');
+const modalIframe = document.getElementById('modalIframe');
 
 // Event listener tombol
 document.querySelectorAll('.text-button-pay a, .text-button-free a').forEach(btn => {
@@ -818,42 +824,41 @@ document.querySelectorAll('.text-button-pay a, .text-button-free a').forEach(btn
     e.preventDefault();
     const text = this.textContent.trim().split(' ').slice(0,2).join(' '); // ambil "Info RPL", "Info TKJ", dll
     if(courses[text]){
-      // Set title & content
       modalTitle.innerText = courses[text].title;
       modalContent.innerText = courses[text].content;
 
-      // Set video
-      if(courses[text].video){
+      // reset video
+      modalVideo.style.display = 'none';
+      modalIframe.style.display = 'none';
+      modalVideo.pause();
+      modalVideoSrc.src = '';
+      modalIframe.src = '';
+
+      // cek link video
+      if(courses[text].video.includes("youtube.com/embed")){
+        modalIframe.src = courses[text].video;
+        modalIframe.style.display = 'block';
+      } else {
         modalVideoSrc.src = courses[text].video;
         modalVideo.style.display = 'block';
         modalVideo.load();
         modalVideo.play();
-      } else {
-        modalVideo.src = '';
-        modalVideo.style.display = 'none';
       }
 
-      // Tampilkan modal
       modal.style.display = 'flex';
     }
   });
 });
 
-// Tutup modal
-modalClose.addEventListener('click', () => {
-  modal.style.display = 'none';
+// Close modal
+modalClose.onclick = function() {
+  modal.style.display = "none";
   modalVideo.pause();
-  modalVideo.currentTime = 0;
-});
+  modalVideoSrc.src = "";
+  modalIframe.src = "";
+};
+</script>
 
-// Klik di luar modal
-window.addEventListener('click', (e) => {
-  if(e.target === modal){
-    modal.style.display = 'none';
-    modalVideo.pause();
-    modalVideo.currentTime = 0;
-  }
-});
 </script>
 
 
